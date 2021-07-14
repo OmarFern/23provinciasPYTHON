@@ -1,3 +1,36 @@
+/*
+Las 23 provincias más CABA realizan sus aportes a la Nación mediante impuestos, a su
+vez, Nación le transfiere fondos mediante la coparticipación.
+Contamos con estos datos del último año. Los datos se agrupan en un archivo con
+formato CSV de 24 líneas con 7 datos cada una. Cada fila corresponde a una provincia, y
+los 7 datos corresponden a: nombre de la provincia, los 5 datos contiguos son los
+impuestos que pagan a Nación, en el siguiente orden: IVA, Ganancias, Contribuciones,
+Exportaciones, Otros. El último dato es la coparticipación que paga Nación a las
+provincias.
+Se pide hacer un programa en Python que:
+    
+1) En base a la lectura del archivo arme:
+a. Un diccionario cuya clave será el nombre de la provincia y los datos una
+lista de los impuestos que paga.
+b. Un diccionario cuya clave será el nombre de la provincia y los datos serán:
+la suma de los impuestos que paga y la coparticipación que recibe.
+
+2) En base al diccionario armado en a) determine el impuesto máximo abonado,
+indicando el tipo de impuesto y la provincia. Por ejemplo: Córdoba – Ganancias
+- $3200 millones.
+
+3) Indique si el IVA fue el mayor impuesto abonado en el año teniendo en cuenta
+el total de impuestos.
+
+4) En base al diccionario armado en b) calcule los porcentajes de retribución, por
+ejemplo, si aportó 40 y recibió 30, el porcentaje es 75% (30/40). Se debe realizar
+un listado indicando provincia – porcentaje.
+
+Nota:
+ Los montos vienen dados en millones de pesos.
+ El código tiene que estar correctamente modularizado.
+ Se adjunta un archivo CSV de ejemplo. */
+
 def impuestos_sin_coparticipacion():
     datos=open("datos.csv","r")
     impuestos={}
